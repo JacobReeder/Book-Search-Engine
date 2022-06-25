@@ -1,4 +1,10 @@
 //TODO: Define the query and mutation functionality to work with the Mongoose models
+//Use the functions in user-controller as a guide-
+//getSingleUser
+//createUSer
+//login
+//saveBook
+//deleteBook
 
 const resolvers = {
     Query: {
