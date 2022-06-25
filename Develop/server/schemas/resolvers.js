@@ -7,5 +7,10 @@ const resolvers = {
       }
     }
   };
+
+  User: async (parent, { username }) => {
+    const params = username ? { username } : {};
+    return User.find(params).sort({ createdAt: -1 });
+  }
   
   module.exports = resolvers;
