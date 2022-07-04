@@ -4,6 +4,10 @@ const { Schema } = require('mongoose');
 // it as the schema for the User's `savedBooks` array in User.js
 
 const bookSchema = new Schema({
+  bookId: {
+    type: String,
+    required: true,
+  },
   authors: [
     {
       type: String,
@@ -13,20 +17,17 @@ const bookSchema = new Schema({
     type: String,
     required: true,
   },
-  // saved book id from GoogleBooks
-  bookId: {
+
+  title: {
     type: String,
     required: true,
-  },
   image: {
     type: String,
   },
   link: {
     type: String,
   },
-  title: {
-    type: String,
-    required: true,
+  
   },
 });
 
