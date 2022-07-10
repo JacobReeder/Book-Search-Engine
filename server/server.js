@@ -26,11 +26,11 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get("*", (req, res) => {
+/*app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+});*/
 
-/*const startApolloServer = async (typeDefs, resolvers) => {
+const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   // integrate our Apollo server with the Express application as middleware
   server.applyMiddleware({ app });*/
@@ -42,8 +42,8 @@ app.get("*", (req, res) => {
         console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
       })
     })
-  //};
+  };
   
   // Call the async function to start the server
-  //startApolloServer(typeDefs, resolvers);
+  startApolloServer(typeDefs, resolvers);
 
